@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-require("../lib/cli").startCli();
+require("../lib/cli").start().then(() => {
+    console.log("Success");
+}).catch(error => {
+    console.error(error);
+});
