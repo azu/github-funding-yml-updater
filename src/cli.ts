@@ -2,6 +2,7 @@ import { createRepositoryList } from "./create-repository-list";
 import { Repository, updateFunding } from "./github-funding-yml-updater";
 import meow from "meow";
 import * as fs from "fs";
+import * as path from "path";
 
 export interface runOptions {
     mode: "add" | "delete"
@@ -71,7 +72,7 @@ export const start = () => {
         console.error("--list-file is not set");
         cli.showHelp();
     }
-    const listContent = fs.readFileSync(cli.flags.listFile, "utf-8");
+    const listContent = fs.readFileSync(path.join(process.cwd(),cli.flags.listFile), "utf-8");
     if (!listContent) {
         throw new Error("list-file is empty");
     }
@@ -79,7 +80,7 @@ export const start = () => {
         mode: cli.flags.mode,
         write: cli.flags.write,
         user: cli.flags.user,
-        listContent: cli.flags.listContent,
+        listContent: listContent,
         token: GITHUB_TOKEN
     });
 };

@@ -21,6 +21,10 @@ export interface updateFundingOptions {
 }
 
 export const updateFunding = async (options: updateFundingOptions) => {
+    if (!options.silent) {
+        console.info(options.dryRun ? "Mode: DryRun mode" : "Mode: Write mode");
+        console.info(`User: ${options.user}`);
+    }
     for (const repository of options.repositoryList) {
         const adaptorOptions = {
             owner: repository.owner,
@@ -37,10 +41,17 @@ export const updateFunding = async (options: updateFundingOptions) => {
         });
         try {
             if (options.mode === "add") {
-                const fundingContent = await fetchFundingFile(korefile);
+                const fundingContent = await fetchFundingFile(korefile).catch((error) => {
+                    // No Contents
+                    if (error.status === 404) {
+                        return {};
+                    }
+                    // other error
+                    return Promise.reject(error);
+                });
                 const shouldUpdate = !hasUserInFunding(fundingContent, options.user);
                 if (!options.silent) {
-                    console.info(`[${repoMark}]: ${shouldUpdate ? "Update" : "NoUpdate"}`);
+                    console.info(`${repoMark}: ${shouldUpdate ? "Try to Update" : "No Update"}`);
                 }
                 if (!options.dryRun && shouldUpdate) {
                     const newContent = addUserToFunding(fundingContent, options.user);
@@ -50,7 +61,7 @@ export const updateFunding = async (options: updateFundingOptions) => {
                 const fundingContent = await fetchFundingFile(korefile);
                 const shouldUpdate = hasUserInFunding(fundingContent, options.user);
                 if (!options.silent) {
-                    console.info(`[${repoMark}]: ${shouldUpdate ? "Delete" : "NoDelete"}`);
+                    console.info(`${repoMark}: ${shouldUpdate ? "Try to Delete" : "No Update"}`);
                 }
                 if (!options.dryRun) {
                     const newContent = deleteUserToFunding(fundingContent, options.user);
