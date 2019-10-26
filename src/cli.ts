@@ -55,19 +55,19 @@ export const start = () => {
     });
 
     const GITHUB_TOKEN = cli.flags.token || process.env.GITHUB_TOKEN;
-    if (GITHUB_TOKEN) {
+    if (!GITHUB_TOKEN) {
         console.error("GitHub Token is not set");
         cli.showHelp();
     }
-    if (cli.flags.mode !== undefined) {
+    if (cli.flags.mode === undefined) {
         console.error("--mode is not set");
         cli.showHelp();
     }
-    if (cli.flags.user !== undefined) {
+    if (cli.flags.user === undefined) {
         console.error("--user is not set");
         cli.showHelp();
     }
-    if (cli.flags.listFile !== undefined) {
+    if (cli.flags.listFile === undefined) {
         console.error("--list-file is not set");
         cli.showHelp();
     }
