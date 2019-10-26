@@ -1,12 +1,14 @@
 # github-funding-yml-updater
 
-Update multiple repositories's `.github/FUNDING.yml` via GitHub API.
+Update multiple repositories's `.github/FUNDING.yml` at once via GitHub API.
 
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install github-funding-yml-updater
+    npm install github-funding-yml-updater -g
+    # or
+    npx github-funding-yml-updater [opions]
 
 ## Usage
 
@@ -43,6 +45,15 @@ azu/example1@develop
 azu/example2
 example/example
 ```
+
+## Notice :memo:
+
+Currently, only put `.github/FUNDING.yml` and does not show sponsor button.
+
+You should turn on **Sponsorships** on your GitHub repository's settings:
+
+- [Displaying a sponsor button in your repository - GitHub Help](https://help.github.com/en/github/building-a-strong-community/displaying-a-sponsor-button-in-your-repository#displaying-a-sponsor-button-in-your-repository)ad
+
 
 ## Changelog
 
