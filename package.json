@@ -1,0 +1,81 @@
+{
+  "name": "github-funding-yml-updater",
+  "version": "1.0.0",
+  "description": "Update multiple repositories's .github/FUNDING.yml via GitHub API",
+  "keywords": [
+    "cli",
+    "funding",
+    "github",
+    "repository",
+    "sponsor",
+    "tool"
+  ],
+  "homepage": "https://github.com/azu/github-funding-yml-updater",
+  "bugs": {
+    "url": "https://github.com/azu/github-funding-yml-updater/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/github-funding-yml-updater.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "bin": {
+    "github-funding-yml-updater": "bin/cmd.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/github-funding-yml-updater.js",
+  "types": "lib/github-funding-yml-updater.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "watch": "tsc -p . --watch"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^3.12.1",
+    "@types/meow": "^5.0.0",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "cross-env": "^6.0.3",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "mocha": "^6.2.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.4.1",
+    "ts-node-test-register": "^8.0.1",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "korefile": "^1.1.0",
+    "meow": "^5.0.0"
+  }
+}
