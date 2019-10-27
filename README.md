@@ -30,6 +30,11 @@ Install with [npm](https://www.npmjs.com/):
 	  # Update Repository
 	  $ github-funding-yml-updater --mode add --user azu --list-file list.txt --token XXXX --write
 
+You should get GitHub Token(`repo` permission) from next url.
+
+- <https://github.com/settings/tokens/new?description=github-funding-yml-updater&scopes=repo>
+
+
 ### file-list
 
 `--file-list` specify text file that is following format:
