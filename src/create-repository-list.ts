@@ -1,9 +1,19 @@
 const githubUrlPatten = /^https:?\/\/github.com\/(.*?)\/(.*?)\/?$/;
 const ownerRepoPattern = /^.+\/.+$/;
 const ownerRepoBranchPattern = /^(.+)\/(.+)@(.+)$/;
+const quotePattern = /^"([^"]+)"$/;
 export const createRepositoryList = (text: string): { owner: string, repo: string, branch?: string }[] => {
     return text.split("\n")
         .filter(line => line.length !== 0)
+        .map(line => {
+            // trim " and "
+            const match = line.match(quotePattern);
+            if (match) {
+                return match[1];
+            } else {
+                return line;
+            }
+        })
         .filter(line => {
             return githubUrlPatten.test(line) || ownerRepoPattern.test(line) || ownerRepoBranchPattern.test(line);
         })

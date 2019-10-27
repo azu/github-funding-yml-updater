@@ -24,6 +24,28 @@ example/example
             }
         ]);
     });
+    it("should support quote text", () => {
+        const text = `
+"azu/example1"
+"azu/example2"
+"example/example"
+`;
+        const list = createRepositoryList(text);
+        assert.deepStrictEqual(list, [
+            {
+                "owner": "azu",
+                "repo": "example1"
+            },
+            {
+                "owner": "azu",
+                "repo": "example2"
+            },
+            {
+                "owner": "example",
+                "repo": "example"
+            }
+        ]);
+    });
     it("should support {owner,repo,branch} list from text", () => {
         const text = `
 azu/example1@master
