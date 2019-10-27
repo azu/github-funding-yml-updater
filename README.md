@@ -56,6 +56,15 @@ You should turn on **Sponsorships** on your GitHub repository's settings:
 
 - [Displaying a sponsor button in your repository - GitHub Help](https://help.github.com/en/github/building-a-strong-community/displaying-a-sponsor-button-in-your-repository#displaying-a-sponsor-button-in-your-repository)
 
+This tools includes helper tool that show settings url from list file.
+
+```shell
+$ npm install github-funding-yml-updater -g
+$ github-funding-yml-settings --list-file list.txt
+https://github.com/azu/example1/settings#repository-funding-links-feature
+https://github.com/azu/example2/settings#repository-funding-links-feature
+```
+
 
 ## Changelog
 

@@ -21,7 +21,8 @@
   "license": "MIT",
   "author": "azu",
   "bin": {
-    "github-funding-yml-updater": "bin/cmd.js"
+    "github-funding-yml-updater": "bin/cmd.js",
+    "github-funding-yml-settings": "bin/github-funding-yml-settings.js"
   },
   "files": [
     "bin/",
