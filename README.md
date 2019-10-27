@@ -1,4 +1,4 @@
-# github-funding-yml-updater
+# github-funding-yml-updater [![Build Status](https://travis-ci.org/azu/github-funding-yml-updater.svg?branch=master)](https://travis-ci.org/azu/github-funding-yml-updater)
 
 Update multiple repositories's `.github/FUNDING.yml` at once via GitHub API.
 
