@@ -30,7 +30,7 @@ Install with [npm](https://www.npmjs.com/):
 	  # Update Repository
 	  $ github-funding-yml-updater --mode add --user azu --list-file list.txt --token XXXX --write
 
-You should get GitHub Token(`repo` permission) from next url.
+You should get GitHub Token(has `repo` permission) from next url.
 
 - <https://github.com/settings/tokens/new?description=github-funding-yml-updater&scopes=repo>
 
