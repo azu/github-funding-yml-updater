@@ -18,22 +18,34 @@ Install with [npm](https://www.npmjs.com/):
 	  $ github-funding-yml-updater [options]
 
 	Options
-	  --mode "add" or "delete"
+	  --mode "add", "delete", or "overwrite"
+	    --mode "add" and --mode "delete" require --user argument
+	    --mode "delete" require --funding-file argument
 	  --user GitHub account name
 	  --list-file input list file path. list file includes line-separated repository list for updating
+	  --funding-file input FUNDING.yml file path. It is for --mode overwrite
 	  --write update GitHub repository if set it. Default: dry-run(no update)
 	  --token GitHub Token(or env GITHUB_TOKEN=xxx)
 
 	Examples
 	  # Dry-run by default
 	  $ github-funding-yml-updater --mode add --user azu --list-file list.txt --token XXXX
-	  # Update Repository
+	  # Add user to Repository
 	  $ github-funding-yml-updater --mode add --user azu --list-file list.txt --token XXXX --write
+      # Delete user from Repository
+	  $ github-funding-yml-updater --mode delete --user azu --list-file list.txt --token XXXX --write
+	  # Overwrite using existing FUNDING.yml
+      $ github-funding-yml-updater --mode overwrite --funding-file ./FUNDING.yml --list-file list.txt --token XXXX --write
 
 You should get GitHub Token(has `repo` permission) from next url.
 
 - <https://github.com/settings/tokens/new?description=github-funding-yml-updater&scopes=repo>
 
+### Mode
+
+- `add`: add `--user` to repositories
+- `delete`: delete `--user` from repositories
+- `overwrite`: overwrite by `--funding-file`
 
 ### file-list
 
