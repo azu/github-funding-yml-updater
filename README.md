@@ -10,7 +10,7 @@ Install with [npm](https://www.npmjs.com/):
 
     npm install github-funding-yml-updater -g
     # or
-    npx github-funding-yml-updater [opions]
+    npx -p github-funding-yml-updater github-funding-yml-updater [opions]
 
 ## Usage
 
@@ -59,8 +59,19 @@ You should turn on **Sponsorships** on your GitHub repository's settings:
 This tools includes helper tool that show settings url from list file.
 
 ```shell
-$ npm install github-funding-yml-updater -g
-$ github-funding-yml-settings --list-file list.txt
+npm install github-funding-yml-updater -g
+github-funding-yml-settings --list-file list.txt
+```
+
+Or
+
+```
+npx -p github-funding-yml-updater github-funding-yml-settings --list-file list.txt
+```
+
+This tools output setting links from `list.txt`.
+
+```
 https://github.com/azu/example1/settings#repository-funding-links-feature
 https://github.com/azu/example2/settings#repository-funding-links-feature
 ```
