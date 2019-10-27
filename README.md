@@ -53,6 +53,15 @@ azu/example2
 example/example
 ```
 
+:memo: Tips
+
+`curl` + [jq](https://stedolan.github.io/jq/) can generate your repositories.
+
+```
+export GH_USER="azu"
+curl -s "https://api.github.com/search/repositories?q=user:${GH_USER}&&per_page=100" | jq ".items[].full_name" > list.txt
+```
+
 ## Notice :memo:
 
 Currently, only put `.github/FUNDING.yml` and does not show sponsor button.
