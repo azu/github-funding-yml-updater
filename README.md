@@ -41,13 +41,19 @@ You should get GitHub Token(has `repo` permission) from next url.
 
 - <https://github.com/settings/tokens/new?description=github-funding-yml-updater&scopes=repo>
 
-### Mode
+### `--write`
+
+`github-funding-yml-updater` dry-run by default.
+
+You want to update actual repostiory and run it `--write` options. 
+
+### `--mode`
 
 - `add`: add `--user` to repositories
 - `delete`: delete `--user` from repositories
 - `overwrite`: overwrite by `--funding-file`
 
-### file-list
+### `--file-list`
 
 `--file-list` specify text file that is following format:
 
