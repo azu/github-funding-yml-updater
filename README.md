@@ -45,7 +45,7 @@ You should get GitHub Token(has `repo` permission) from next url.
 
 `github-funding-yml-updater` dry-run by default.
 
-You want to update actual repostiory and run it `--write` options. 
+If you want to update actual repository, you should run it `--write` options. 
 
 ### `--mode`
 
