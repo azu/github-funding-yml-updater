@@ -85,19 +85,19 @@ curl -s "https://api.github.com/search/repositories?q=user:${GH_USER}&&per_page=
 Add `gh-user` to each repositories:
 
 ```shell-session
-$ github-funding-yml-updater --mode add --user gh-user --list-file list.txt --token $GITHUB_TOKEN --write
+github-funding-yml-updater --mode add --user gh-user --list-file list.txt --token $GITHUB_TOKEN --write
 ```
 
 Remove `gh-user` from each repositories:
 
 ```shell-session
-$ github-funding-yml-updater --mode delete --user gh-user --list-file list.txt --token $GITHUB_TOKEN --write
+github-funding-yml-updater --mode delete --user gh-user --list-file list.txt --token $GITHUB_TOKEN --write
 ```
 
 Overwrite `.github/FUNDING.yml` with a `file.yml`:
 
 ```shell-session
-$ github-funding-yml-updater --mode overwrite --funding-file file.yml --list-file list.txt --token $GITHUB_TOKEN --write
+github-funding-yml-updater --mode overwrite --funding-file file.yml --list-file list.txt --token $GITHUB_TOKEN --write
 ```
 
 ## Notice :warning:
