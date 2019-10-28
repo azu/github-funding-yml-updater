@@ -20,7 +20,7 @@ Install with [npm](https://www.npmjs.com/):
 	Options
 	  --mode "add", "delete", or "overwrite"
 	    --mode "add" and --mode "delete" require --user argument
-	    --mode "delete" require --funding-file argument
+	    --mode "overwrite" require --funding-file argument
 	  --user GitHub account name
 	  --list-file input list file path. list file includes line-separated repository list for updating
 	  --funding-file input FUNDING.yml file path. It is for --mode overwrite
