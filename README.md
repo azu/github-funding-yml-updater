@@ -128,6 +128,9 @@ https://github.com/azu/example1/settings#repository-funding-links-feature
 https://github.com/azu/example2/settings#repository-funding-links-feature
 ```
 
+## References
+
+- [Displaying a sponsor button in your repository - GitHub Help](https://help.github.com/en/github/building-a-strong-community/displaying-a-sponsor-button-in-your-repository)
 
 ## Changelog
 
