@@ -100,7 +100,7 @@ Overwrite `.github/FUNDING.yml` with a `file.yml`:
 $ github-funding-yml-updater --mode overwrite --funding-file file.yml --list-file list.txt --token $GITHUB_TOKEN --write
 ```
 
-## Notice :memo:
+## Notice :warning:
 
 Currently, only put `.github/FUNDING.yml` and does not show sponsor button.
 
