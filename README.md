@@ -106,6 +106,8 @@ Currently, only put `.github/FUNDING.yml` and does not show sponsor button.
 
 You should turn on **Sponsorships** on your GitHub repository's settings:
 
+![Sponsorship check](https://user-images.githubusercontent.com/19714/67622206-159b8b00-f853-11e9-8589-081132fb6e14.png)
+
 - [Displaying a sponsor button in your repository - GitHub Help](https://help.github.com/en/github/building-a-strong-community/displaying-a-sponsor-button-in-your-repository#displaying-a-sponsor-button-in-your-repository)
 
 This tools includes helper tool that show settings url from list file.
