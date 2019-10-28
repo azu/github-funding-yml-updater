@@ -91,7 +91,7 @@ export const updateFunding = async (options: updateFundingOptions) => {
                 if (!options.silent) {
                     console.info(`${repoMark}: ${shouldUpdate ? "Try to Delete" : "No Update"}`);
                 }
-                if (!options.dryRun) {
+                if (!options.dryRun && shouldUpdate) {
                     const newContent = deleteUserToFunding(fundingContent, user);
                     const isEmptyObject = Object.keys(newContent).length === 0;
                     if (isEmptyObject) {
