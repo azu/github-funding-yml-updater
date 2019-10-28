@@ -1,6 +1,6 @@
 {
   "name": "github-funding-yml-updater",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Update multiple repositories's .github/FUNDING.yml via GitHub API",
   "keywords": [
     "cli",
