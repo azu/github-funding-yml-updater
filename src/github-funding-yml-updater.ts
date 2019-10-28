@@ -87,7 +87,6 @@ export const updateFunding = async (options: updateFundingOptions) => {
                 const user = options.user;
                 const fundingContent = await fetchFundingFile(korefile);
                 const shouldUpdate = hasUserInFunding(fundingContent, user);
-                console.log("shouldUpdate", fundingContent);
                 if (!options.silent) {
                     console.info(`${repoMark}: ${shouldUpdate ? "Try to Delete" : "No Update"}`);
                 }
