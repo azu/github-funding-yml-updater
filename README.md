@@ -53,9 +53,9 @@ If you want to update actual repository, you should run it `--write` options.
 - `delete`: delete `--user` from repositories
 - `overwrite`: overwrite by `--funding-file`
 
-### `--file-list`
+### `--list-file`
 
-`--file-list` specify text file that is following format:
+`--list-file` specify text file that is following format:
 
 ```
 owner/repo
