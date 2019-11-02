@@ -4,6 +4,12 @@ Update multiple repositories's `.github/FUNDING.yml` at once via GitHub API.
 
 It will help you to setup GitHub Sponsors for your repository.
 
+## Features
+
+- Setup `.github/FUNDING.yml` for GitHub Sponsors
+- No need to clone git repository in local
+    - This tools using GitHub API
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
